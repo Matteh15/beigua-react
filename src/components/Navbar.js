@@ -11,12 +11,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { EmailOutlined, Facebook, Instagram } from "@mui/icons-material";
 
 import { BrowserView, isMobile, MobileView } from "react-device-detect";
-import { mainGreen } from "../var";
+import { mainColor, mainGreen } from "../var";
 import { useState } from "react";
 
 import styled from "styled-components";
 import logo from "../img/logo.png";
-import tiktok from "../img/tiktok-brands.svg";
 
 const Navbar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -25,14 +24,14 @@ const Navbar = () => {
     setOpenDrawer(!openDrawer);
   };
 
-  const pages = ["HOME", "CHI SIAMO", "NOTIZIE", "PETIZIONE", "CONTATTI"];
+  const pages = ["HOME", "CHI SIAMO", "NOTIZIE", "CONTATTI", "PETIZIONE"];
 
   return (
     <AppBar
       style={
         isMobile
-          ? { background: mainGreen, padding: "0.5rem 0.5rem" }
-          : { background: mainGreen, padding: "1rem 5rem" }
+          ? { background: mainColor, padding: "0.5rem 0.5rem" }
+          : { background: mainColor, padding: "1rem 5rem" }
       }
     >
       <BrowserView>
@@ -51,8 +50,11 @@ const Navbar = () => {
             >
               <img src={logo} width="100px" color="white" />
             </IconButton>
-            <Typography variant="h6" component="div" letterSpacing={5}>
-              SAVE PETS
+            <Typography variant="h6" component="div">
+              SAVE
+              <br />
+              UR
+              <br /> PETS
             </Typography>
           </Stack>
 
@@ -63,11 +65,11 @@ const Navbar = () => {
             spacing={10}
             flexGrow={1}
           >
-            <MyBtn>HOME</MyBtn>
-            <MyBtn>CHI SIAMO</MyBtn>
-            <MyBtn>NOTIZIE</MyBtn>
-            <MyBtn>PETIZIONE</MyBtn>
-            <MyBtn>CONTATTI</MyBtn>
+            {pages.map((value, index) => (
+              <MyBtn className={value == "PETIZIONE" ? "pet" : ""}>
+                {value}
+              </MyBtn>
+            ))}
           </Stack>
         </Toolbar>
       </BrowserView>
@@ -78,13 +80,13 @@ const Navbar = () => {
           onClose={() => setOpenDrawer(!openDrawer)}
           PaperProps={{
             sx: {
-              backgroundColor: mainGreen,
+              backgroundColor: mainColor,
               padding: "2rem",
             },
           }}
         >
           {pages.map((value, index) => (
-            <MyBtn>{value}</MyBtn>
+            <MyBtn className={value == "PETIZIONE" ? "pet" : ""}>{value}</MyBtn>
           ))}
 
           <Stack direction="row" alignItems="flex-end" flexGrow={1}>
@@ -144,6 +146,10 @@ const Navbar = () => {
 
 const MyBtn = styled(Button)`
   color: white !important;
+
+  &.pet {
+    color: #98c63b !important;
+  }
 
   @media screen and (max-width: 600px) {
     margin: 1rem 0;

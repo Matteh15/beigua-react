@@ -1,1 +1,2 @@
-export const mainGreen = "#1D3C26";
+export const mainColor = "#20202A";
+export const mainGreen = "#98C63B";
