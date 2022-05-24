@@ -1,38 +1,20 @@
-import {
-  Button,
-  Grid,
-  Paper, 
-  Typography,
-  ButtonBase
-} from "@mui/material";
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import ButtonBase from '@mui/material/ButtonBase';
 
-
-
-import{
-  makeStyles
-} from "@mui/styles";
-
-import { CallMissedSharp} from "@mui/icons-material";
-const useStyle = makeStyles({
-  root:{
-    background: 'linear-gradient(45deg, #333, #999)',
-    border: 0,
-    borderRadius: 15,
-    color: 'white',
-    padding:'0 30px'
-  }
-})
-
-const Img = makeStyles({
+const Img = styled('img')({
   margin: 'auto',
   display: 'block',
   maxWidth: '100%',
   maxHeight: '100%',
 });
-function Notfound() {
-  return(
-    <>
-   <Paper
+
+export default function ComplexGrid() {
+  return (
+    <Paper
       sx={{
         p: 2,
         margin: 'auto',
@@ -75,12 +57,5 @@ function Notfound() {
         </Grid>
       </Grid>
     </Paper>
-    </>
   );
 }
-
-
-
-
-
-export default Notfound;
