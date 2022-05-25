@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-
+import cat from "../img/sadcat.png";
+import ButtonGreen from "./ButtonGreen"
 
 import {
   Grid,
@@ -9,23 +10,21 @@ import {
   Button
 }from '@mui/material';
 
-const Img = styled('img')({
+
+
+const Img = styled(cat)({
   margin: 'auto',
   display: 'block',
-  maxWidth: '100%',
-  maxHeight: '100%',
+  height: '50px'
 });
+
+
 
 export default function ComplexGrid() {
   return (
 
-      <Grid container spacing={2}>
-        <Grid item>
-          <ButtonBase sx={{ width: 128, height: 128 }}>
-            <Img alt="complex" src="/static/images/grid/complex.jpg" />
-          </ButtonBase>
-        </Grid>
-        <Grid item xs={12} sm container>
+      <Grid container spacing={2} style={{ backgroundColor: "#20202A", height:"1024px"}} >
+        <Grid item xs={12} sm container style={{ backgroundImage: `url(${cat})`, height:"100%"}}>
           <Grid item xs container direction="column" spacing={2}>
             <Grid item xs>
               <Typography gutterBottom variant="subtitle1" component="div">
@@ -38,18 +37,15 @@ export default function ComplexGrid() {
                 ID: 1030114
               </Typography>
             </Grid>
+           
             <Grid item>
-              <Button variant="contained" href="#contained-buttons">
-                  Link
-              </Button>
+              <ButtonGreen variant="contained" href="#contained-buttons" text="GEnersl">Firma qui</ButtonGreen>
+              <ButtonGreen variant="contained" href="#contained-buttons">Torna alla home</ButtonGreen>
             </Grid>
           </Grid>
-          <Grid item>
-            <Typography variant="subtitle1" component="div">
-              $19.00
-            </Typography>
-          </Grid>
+       
         </Grid>
+        
       </Grid>
    
   );
