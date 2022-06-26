@@ -33,6 +33,7 @@ const Navbar = () => {
           ? { background: mainColor, padding: "0.5rem 0.5rem" }
           : { background: mainColor, padding: "1rem 5rem" }
       }
+      position="sticky"
     >
       <BrowserView>
         <Toolbar>
