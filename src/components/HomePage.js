@@ -11,6 +11,8 @@ import ButtonGreen from "./ButtonGreen";
 
 import { Footer } from "./Footer";
 
+import { FaTiktok, FaInstagram, FaFacebook } from "react-icons/fa";
+
 const HomePage = () => {
   return (
     <>
@@ -61,9 +63,15 @@ const HomePage = () => {
                 alignItems: "center",
               }}
             >
-              <span>1</span>
-              <span>1</span>
-              <span>1</span>
+              <SvgContainer>
+                <FaInstagram />
+              </SvgContainer>
+              <SvgContainer>
+                <FaFacebook />
+              </SvgContainer>
+              <SvgContainer>
+                <FaTiktok />
+              </SvgContainer>
             </div>
           </div>
         </Container>
@@ -181,6 +189,12 @@ const FlexDiv = styled.div`
 
   img {
     width: 60%;
+  }
+`;
+
+const SvgContainer = styled.span`
+  svg {
+    font-size: 48px;
   }
 `;
 
