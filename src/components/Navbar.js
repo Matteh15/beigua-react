@@ -54,7 +54,7 @@ const Navbar = () => {
             <Typography variant="h6" component="div">
               SAVE
               <br />
-              UR
+              YOUR
               <br /> PETS
             </Typography>
           </Stack>

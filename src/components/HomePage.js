@@ -7,6 +7,9 @@ import gattoHome from "../img/gattoHome.png";
 import canehome from "../img/canehome.png";
 import { faClipboardList } from "@fortawesome/free-solid-svg-icons";
 import { BrowserView, MobileView } from "react-device-detect";
+import ButtonGreen from "./ButtonGreen";
+
+import { Footer } from "./Footer";
 
 const HomePage = () => {
   return (
@@ -20,6 +23,7 @@ const HomePage = () => {
             padding: "5rem 10rem",
             color: "white",
             height: "100vh",
+            overflowY: "hidden",
           }}
         >
           <H1Home>
@@ -111,11 +115,30 @@ const HomePage = () => {
         </DivCards>
       </Container>
 
-      <Container maxWidth="100%" style={{ backgroundColor: "#20202A" }}>
-        <div>
-          <H1Home>Casi tra gli animali</H1Home>
-        </div>
-        <div></div>
+      <Container
+        style={{
+          backgroundColor: "#20202A",
+          color: "white",
+          borderRadius: "10px",
+          boxShadow: "5px 5px 10px rgb(0 0 0 / 0.4)",
+        }}
+      >
+        <FlexDiv style={{ marginTop: "2rem" }}>
+          <div style={{ width: "60%" }}>
+            <H1HomeSecond>Casi tra gli animali</H1HomeSecond>
+            <p>
+              Proprio come negli esseri umani,i casi di mesotelioma maligno
+              negli animali possono esser fatti risalire ad un’esposizione alle
+              fibre di amianto.
+            </p>
+          </div>
+          <FlexDiv style={{ width: "40%" }}>
+            <img src={canehome} alt="canehome" />
+          </FlexDiv>
+        </FlexDiv>
+        <ButtonGreen style={{ marginBottom: "3rem" }}>
+          Leggi di pi&ugrave;
+        </ButtonGreen>
       </Container>
     </>
   );
@@ -125,6 +148,16 @@ const H1Home = styled.h1`
   font-size: 72px;
   font-weight: 800;
   margin-bottom: 3rem;
+`;
+
+const H1HomeSecond = styled.h1`
+  font-size: 64px;
+  font-weight: 800;
+  margin-bottom: 3rem;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const DivCards = styled.div`
@@ -138,6 +171,16 @@ const DivCards = styled.div`
     flex-direction: column;
     padding: 0rem;
     margin-top: 5rem;
+  }
+`;
+
+const FlexDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 60%;
   }
 `;
 
