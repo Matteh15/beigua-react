@@ -10,7 +10,7 @@ export const theme = createTheme({
         dark:'#698a1c'
     },
     otherColor:{
-        main:'#ffffff'
+        main:'#fffffe'
     }
     }
 });
