@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Container } from "@mui/material";
 import Card from "./Card";
 import gattoHome from "../img/gattoHome.png";
+import canehome from "../img/canehome.png";
 import { faClipboardList } from "@fortawesome/free-solid-svg-icons";
 import { BrowserView, MobileView } from "react-device-detect";
 
@@ -108,6 +109,13 @@ const HomePage = () => {
             skald
           </Card>
         </DivCards>
+      </Container>
+
+      <Container maxWidth="100%" style={{ backgroundColor: "#20202A" }}>
+        <div>
+          <H1Home>Casi tra gli animali</H1Home>
+        </div>
+        <div></div>
       </Container>
     </>
   );
