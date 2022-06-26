@@ -101,12 +101,11 @@ const HomePage = () => {
           alignItems: "center",
         }}
       >
-        <DivCards>
+        <DivCards style={{ margin: "7rem 0" }}>
           <Card
             icon={1}
             title="Petizione"
             descr="Firma la petizione: “No alla miniera nel comprensorio del Parco Naturale Regionale del Beigua”."
-            style={{ marginBottom: "2rem" }}
           >
             skald
           </Card>
@@ -131,7 +130,7 @@ const HomePage = () => {
           boxShadow: "5px 5px 10px rgb(0 0 0 / 0.4)",
         }}
       >
-        <FlexDiv style={{ marginTop: "2rem" }}>
+        <FlexDiv style={{ marginTop: "5rem" }}>
           <div style={{ width: "60%" }}>
             <H1HomeSecond>Casi tra gli animali</H1HomeSecond>
             <p>
