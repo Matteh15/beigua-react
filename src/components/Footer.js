@@ -52,6 +52,16 @@ const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+
+    .sameWidth {
+      width: 100%;
+      margin: 1.5rem 0;
+      padding: 1rem 0;
+    }
+  }
 `;
 
 const FlexDiv = styled.div`
