@@ -8,6 +8,11 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 import ButtonGreen from "./ButtonGreen";
 import { ClassNames } from "@emotion/react";
 
+import { FaClipboardList, FaBook } from "react-icons/fa";
+import { BsFillBinocularsFill } from "react-icons/bs";
+
+import styleds from "styled-components";
+
 const useStyles = styled((theme) => ({
   card: {
     marginBottom: theme.spacing,
@@ -17,27 +22,60 @@ const useStyles = styled((theme) => ({
   },
 }));
 
-export default function MultiActionAreaCard() {
+export default function MultiActionAreaCard({ icon, title, descr }) {
   const classes = useStyles();
   return (
-    <Card sx={{ maxWidth: 307, height: 446 }}>
+    <MyCard>
       <CardActionArea>
-        <CardMedia className={classes.media} image="" titele="MyPost" />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
+        <CardContent
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-beetwen",
+            alignItems: "center",
+          }}
+        >
+          {(icon == 1 && (
+            <FaClipboardList style={{ width: "48px", height: "48px" }} />
+          )) ||
+            (icon == 2 && (
+              <FaBook style={{ width: "48px", height: "48px" }} />
+            )) ||
+            (icon == 3 && (
+              <BsFillBinocularsFill style={{ width: "48px", height: "48px" }} />
+            ))}
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            style={{ marginTop: "1rem" }}
+          >
+            {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
+          <Typography style={{ height: "100px" }}>{descr}</Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <ButtonGreen variant="contained" href="#contained-buttons">
           Continua sul sito
         </ButtonGreen>
       </CardActions>
-    </Card>
+    </MyCard>
   );
 }
+
+const MyCard = styleds(Card)`
+  width: 350px;
+
+  @media screen and (max-width: 767px) {
+    width: 250px;
+    margin-bottom: 3rem;
+  }
+
+`;
