@@ -29,28 +29,30 @@ export default function ComplexGrid() {
 
                 <Grid item xs container direction="column" spacing={0}>
                   <Grid item xs>
-                    <Typography  variant="h1" component="div" color="white" fontFamily={"Poppins"} fontWeight={"800"}>
+                    <Typography component="div" color="white" fontFamily={"Poppins"} fontWeight={"800"} fontSize={"228px"} marginTop={"100px"} marginLeft={"100px"}>
                       404
                     </Typography>
-                    <Typography  variant="h2" color="white" fontFamily={"Poppins"} fontWeight={"800"}>
+                    <Typography  variant="h2" color="white" fontFamily={"Poppins"} fontWeight={"800"}  marginLeft={"100px"}>
                       OPS!!! PAGINA NON TROVATA
                     </Typography>
-                    <Typography  color="white" fontFamily={"Poppins"} fontWeight={"800"} fontSize={"40px"}>
+                    <Typography  color="white" fontFamily={"Poppins"} fontWeight={"800"} fontSize={"40px"}  marginLeft={"100px"}>
                       Non siamo riusciti a trovare quello che stavi cercando potrebbe essere stato trivellato... 
                     </Typography>
-                    <Typography  color="white" fontFamily={"Montserrat"} >
+                    <Typography  color="white" fontFamily={"Montserrat"}  marginLeft={"100px"}>
                       Non ti abbattere, Firma la petizione per salvare te e il tuo cucciolo.
                     </Typography>
-                  </Grid>
-                
-                  <Grid item>
-                    <ButtonGreen variant="contained" href="#contained-buttons" text="GEnersl">Firma qui</ButtonGreen>
-                    <ButtonGreen variant="contained" href="#contained-buttons">Torna alla home</ButtonGreen>
+                    <Grid item marginTop={"30px"}  marginLeft={"100px"}>
+                      <ButtonGreen variant="contained" href="#contained-buttons">Firma qui</ButtonGreen>
+                      <ButtonGreen variant="contained" href="#contained-buttons">Torna alla home</ButtonGreen>
+                    </Grid>
                   </Grid>
                 </Grid>
+                  
                 <Grid item xs container direction="column" spacing={0}>
-                <img src={cat} width="100%" height="100%" color="white"/>
+                  <img src={cat} width="100%" height="100%"/>
                 </Grid>
+                
+              
       </Grid>
 
 
