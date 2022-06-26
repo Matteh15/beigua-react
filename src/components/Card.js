@@ -63,7 +63,7 @@ export default function MultiActionAreaCard({ icon, title, descr }) {
         }}
       >
         <ButtonGreen variant="contained" href="#contained-buttons">
-          Continua sul sito
+          Leggi di più
         </ButtonGreen>
       </CardActions>
     </MyCard>
