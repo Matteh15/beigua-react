@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
 
 import { Container } from "@mui/material";
+import { Footer } from "./components/Footer";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <GlobalStyle />
       <Navbar />
       <HomePage />
+      <Footer />
     </>
   );
 };
