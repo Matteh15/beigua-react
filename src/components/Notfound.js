@@ -11,6 +11,7 @@ import {
   ButtonBase,
   Button
 }from '@mui/material';
+import ButtonWhite from './ButtonWhite';
 
 
 
@@ -43,7 +44,7 @@ export default function ComplexGrid() {
                     </Typography>
                     <Grid item marginTop={"30px"}  marginLeft={"100px"}>
                       <ButtonGreen variant="contained" href="#contained-buttons">Firma qui</ButtonGreen>
-                      <ButtonGreen variant="contained" href="#contained-buttons">Torna alla home</ButtonGreen>
+                      <ButtonWhite variant="contained" href="#contained-buttons" style={{color:'black'}} >Torna alla home</ButtonWhite>
                     </Grid>
                   </Grid>
                 </Grid>
