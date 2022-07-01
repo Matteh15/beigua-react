@@ -5,6 +5,7 @@ import Image from '@mui/material';
 import ButtonGreen from "./ButtonGreen"
 import { BrowserView, isMobile, MobileView } from "react-device-detect";
 import styled from "styled-components";
+import MediaQuery from 'react-responsive';
 
 import {
   Grid,
@@ -24,57 +25,101 @@ import ButtonWhite from './ButtonWhite';
 });*/
 
 
-const Div404 = styled(Typography)`
-
- 
-  font-size:228px !important; 
-
-  @media screen and (max-width: 767px) {
+const Div404 = styled.div`
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 800;
+  margin-top: 40px;
+  margin-left: 90px;
+@media screen and (min-width: 802px) {
+  font-size:100px ; 
+}
+  @media screen and (max-width: 801px) {
     flex-direction: column;
     font-size:20px;
   }
 `;
-
-
+const DivOPS = styled.div`
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 800;
+  margin-top: 40px;
+  margin-left: 90px;
+@media screen and (min-width: 802px) {
+  font-size:98px ; 
+}
+  @media screen and (max-width: 801px) {
+    flex-direction: column;
+    font-size:20px;
+  }
+`;
+const Div1 = styled.div`
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 800;
+  margin-top: 20px;
+  margin-left: 90px;
+@media screen and (min-width: 802px) {
+  font-size:20px ; 
+}
+  @media screen and (max-width: 801px) {
+    flex-direction: column;
+    font-size:20px;
+  }
+`;
+const Div2 = styled.div`
+  color: white;
+  font-family: 'Poppins';
+  margin-top: 20px;
+  margin-left: 90px;
+@media screen and (min-width: 802px) {
+  font-size:12px ; 
+}
+  @media screen and (max-width: 801px) {
+    flex-direction: column;
+    font-size:20px;
+  }
+`;
+export const ProfilePic = styled.img`
+    width: 50vh;
+    
+    margin-left: 355px;
+`;
 
 export default function ComplexGrid() {
   return (
    
-    <Grid container  spacing={0} style={{ backgroundColor: "#20202A", minHeight:"100vh"}} > 
+    <Grid container  spacing={0} style={{ backgroundColor: "#20202A", minHeight:"100vh", backgroundImage:`url(${cat})`, backgroundRepeat: 'no-repeat', backgroundSize: '800px', backgroundPositionY:'50%', backgroundPositionX:'120%'}} > 
            
-      <Grid item xs container direction="column" spacing={0}> 
+      <Grid item xs container direction="column" spacing={0} style={{}}> 
      
         <Grid item xs>
+       
           <Div404> 
-            <Typography component="div" color="white" fontFamily={"Poppins"} fontWeight={"800"}  marginTop={"90px"} marginLeft={"90px"}>
               404
-            </Typography>
           </Div404> 
+
         
-            <Typography  variant="h2" color="white" fontFamily={"Poppins"} fontWeight={"800"}  marginLeft={"90px"}>
+            <DivOPS>
               OPS!!! PAGINA NON TROVATA
-            </Typography>
+            </DivOPS>
      
  
-            <Typography  color="white" fontFamily={"Poppins"} fontWeight={"800"} fontSize={"40px"}  marginLeft={"90px"}>
+            <Div1>
               Non siamo riusciti a trovare quello che stavi cercando potrebbe essere stato trivellato... 
-            </Typography>
+            </Div1>
 
-            <Typography  color="white" fontFamily={"Poppins"}  marginLeft={"90px"} fontSize={"22px"} >
+            <Div2>
               Non ti abbattere, Firma la petizione per salvare te e il tuo cucciolo.
-            </Typography>
+            </Div2>
       
           <Grid item marginTop={"30px"}  marginLeft={"90px"}>
             <ButtonGreen variant="contained" href="#contained-buttons">Firma qui</ButtonGreen>
             <ButtonWhite variant="contained" href="#contained-buttons" style={{color:'black'}} >Torna alla home</ButtonWhite>
           </Grid>
         </Grid>
-      </Grid>
-         
-      <Grid item xs container direction="column" spacing={0}>
-          <img src={cat}/>
-      </Grid>
-    
+       
+      </Grid> 
     </Grid> 
   );
 }
