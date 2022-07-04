@@ -1,11 +1,11 @@
 import CookieConsent from "react-cookie-consent";
 
-export default function ComplexGrid() {
+const Cookie = () => {
     return (
         <CookieConsent 
             debug={true}
             location="bottom"
-            style={{background:'#000'}}
+            style={{background:'#20202a'}}
             buttonStyle={{color:"#000", background:"#fff", fontSize:"14px"}}
             buttonText="Ok great"
             expires={365}
@@ -14,3 +14,4 @@ export default function ComplexGrid() {
         </CookieConsent>
     );
 }
+export default Cookie;
