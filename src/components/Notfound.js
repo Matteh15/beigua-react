@@ -36,7 +36,11 @@ const Div404 = styled.div`
 }
   @media screen and (max-width: 801px) {
     flex-direction: column;
-    font-size:20px;
+    font-size:60px;
+    margin-left: 50px;
+  }
+  @media screen and (max-width: 360px) {
+    margin-left: 50px;
   }
 `;
 const DivOPS = styled.div`
@@ -46,11 +50,15 @@ const DivOPS = styled.div`
   margin-top: 40px;
   margin-left: 90px;
 @media screen and (min-width: 802px) {
-  font-size:98px ; 
+  font-size:68px; 
 }
   @media screen and (max-width: 801px) {
     flex-direction: column;
-    font-size:20px;
+    font-size:48px;
+    margin-left: 50px;
+  }
+  @media screen and (max-width: 360px) {
+    margin-left: 50px;
   }
 `;
 const Div1 = styled.div`
@@ -59,12 +67,17 @@ const Div1 = styled.div`
   font-weight: 800;
   margin-top: 20px;
   margin-left: 90px;
+  text-shadow: 1px 1px 6px #20202A;
 @media screen and (min-width: 802px) {
-  font-size:20px ; 
+  font-size:25px ; 
 }
   @media screen and (max-width: 801px) {
     flex-direction: column;
     font-size:20px;
+    margin-left: 50px;
+  }
+  @media screen and (max-width: 360px) {
+    margin-left: 50px;
   }
 `;
 const Div2 = styled.div`
@@ -72,25 +85,51 @@ const Div2 = styled.div`
   font-family: 'Poppins';
   margin-top: 20px;
   margin-left: 90px;
+  text-shadow: 1px 1px 6px #20202A;
 @media screen and (min-width: 802px) {
-  font-size:12px ; 
+  font-size:22px ; 
 }
   @media screen and (max-width: 801px) {
     flex-direction: column;
-    font-size:20px;
+    font-size:19px;
+    margin-left: 50px;
+  }
+  @media screen and (max-width: 360px) {
+    margin-left: 50px;
   }
 `;
-export const ProfilePic = styled.img`
-    width: 50vh;
-    
-    margin-left: 355px;
+
+
+export const ProfilePic = styled(Grid)`
+  background-color:#20202A;
+  background-size:800px;
+  min-height: 100vh;
+  background-repeat:no-repeat;
+  background-position:right;
+  background-image: url(${cat}); 
+  @media screen and (min-width: 1230px) {
+    background-size:950px;
+  }
+  @media screen and (max-width: 1029px) {
+    background-size:750px;
+  
+  }
+  @media screen and (max-width: 740px) {
+    background-size:900px;
+    background-position:bottom;
+  }
+
+  @media screen and (max-width: 360px) {
+    background-size:350px;
+    background-position:bottom;
+  }
 `;
 
 export default function ComplexGrid() {
   return (
    
-    <Grid container  spacing={0} style={{ backgroundColor: "#20202A", minHeight:"100vh", backgroundImage:`url(${cat})`, backgroundRepeat: 'no-repeat', backgroundSize: '800px', backgroundPositionY:'50%', backgroundPositionX:'120%'}} > 
-           
+    <ProfilePic container  spacing={0}> 
+          
       <Grid item xs container direction="column" spacing={0} style={{}}> 
      
         <Grid item xs>
@@ -98,20 +137,16 @@ export default function ComplexGrid() {
           <Div404> 
               404
           </Div404> 
-
-        
-            <DivOPS>
+          <DivOPS>
               OPS!!! PAGINA NON TROVATA
-            </DivOPS>
-     
- 
-            <Div1>
+          </DivOPS>
+          <Div1>
               Non siamo riusciti a trovare quello che stavi cercando potrebbe essere stato trivellato... 
-            </Div1>
+          </Div1>
 
-            <Div2>
+          <Div2>
               Non ti abbattere, Firma la petizione per salvare te e il tuo cucciolo.
-            </Div2>
+          </Div2>
       
           <Grid item marginTop={"30px"}  marginLeft={"90px"}>
             <ButtonGreen variant="contained" href="#contained-buttons">Firma qui</ButtonGreen>
@@ -120,7 +155,7 @@ export default function ComplexGrid() {
         </Grid>
        
       </Grid> 
-    </Grid> 
+    </ProfilePic> 
   );
 }
 
