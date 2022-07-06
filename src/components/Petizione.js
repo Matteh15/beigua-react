@@ -21,7 +21,7 @@ const ChiSiamo = () => {
         <FlexDiv style={{ marginTop: "5rem" }}>
           <SessantaPerc>
             <H1HomeSecond>Firma la petizione</H1HomeSecond>
-            <p>
+            <p className="raleway">
               Con questa nostra petizione chiediamo che{" "}
               <strong>VENGA RITIRATO</strong> il decreto in considerazione del
               fatto che le comunità locali da anni si oppongono a qualunque

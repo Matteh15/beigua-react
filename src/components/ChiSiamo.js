@@ -12,41 +12,43 @@ import noi from "../img/Noi.png";
 const ChiSiamo = () => {
   return (
     <>
-      <CasiContainer
-        style={{
-          borderRadius: "10px",
-          boxShadow: "5px 5px 10px rgb(0 0 0 / 0.4)",
-        }}
-      >
-        <FlexDiv style={{ marginTop: "5rem" }}>
-          <SessantaPerc>
-            <H1HomeSecond>Chi siamo</H1HomeSecond>
-            <p>
-              Siamo un gruppo di studenti che mira a sensibilizzare la comunità
-              circa gli effetti devastanti che una miniera nel Beigua
-              comporterebbe sia sulle persone che sugli animali.{" "}
-              <strong>
-                Un modo per evitare tutto questo è firmare la petizione.
-              </strong>
-            </p>
-          </SessantaPerc>
-          <QuarantaPerc>
-            <img src={noi} alt="noi" />
-          </QuarantaPerc>
-        </FlexDiv>
-        <BrowserView>
-          <ButtonGreen style={{ margin: "3rem auto" }}>
-            Leggi di pi&ugrave;
-          </ButtonGreen>
-        </BrowserView>
-        <MobileView>
-          <FlexDiv>
+      <div style={{ minHeight: "100vh" }}>
+        <CasiContainer
+          style={{
+            borderRadius: "10px",
+            boxShadow: "5px 5px 10px rgb(0 0 0 / 0.4)",
+          }}
+        >
+          <FlexDiv style={{ marginTop: "5rem" }}>
+            <SessantaPerc>
+              <H1HomeSecond>Chi siamo</H1HomeSecond>
+              <p className="raleway">
+                Siamo un gruppo di studenti che mira a sensibilizzare la
+                comunità circa gli effetti devastanti che una miniera nel Beigua
+                comporterebbe sia sulle persone che sugli animali.{" "}
+                <strong>
+                  Un modo per evitare tutto questo è firmare la petizione.
+                </strong>
+              </p>
+            </SessantaPerc>
+            <QuarantaPerc>
+              <img src={noi} alt="noi" />
+            </QuarantaPerc>
+          </FlexDiv>
+          <BrowserView>
             <ButtonGreen style={{ margin: "3rem auto" }}>
               Leggi di pi&ugrave;
             </ButtonGreen>
-          </FlexDiv>
-        </MobileView>
-      </CasiContainer>
+          </BrowserView>
+          <MobileView>
+            <FlexDiv>
+              <ButtonGreen style={{ margin: "3rem auto" }}>
+                Leggi di pi&ugrave;
+              </ButtonGreen>
+            </FlexDiv>
+          </MobileView>
+        </CasiContainer>
+      </div>
     </>
   );
 };

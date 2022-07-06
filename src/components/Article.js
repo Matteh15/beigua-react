@@ -76,7 +76,7 @@ const Article = () => {
             <H1HomeSecond>
               Morti alcuni cani da soccorso a causa dell’amianto
             </H1HomeSecond>
-            <p>
+            <p className="raleway">
               Secondo il sindacato dei vigili del fuoco la causa andrebbe
               ricercata nell’esposizione alle polveri sottili di amianto.
             </p>

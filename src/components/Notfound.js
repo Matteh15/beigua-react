@@ -121,8 +121,10 @@ export default function ComplexGrid() {
           </Div1>
 
           <Div2>
-            Non ti abbattere, Firma la petizione per salvare te e il tuo
-            cucciolo.
+            <p className="raleway">
+              Non ti abbattere, Firma la petizione per salvare te e il tuo
+              cucciolo.
+            </p>
           </Div2>
 
           <Grid item marginTop={"30px"} marginLeft={"90px"}>
