@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
 import Article from "./components/Article";
 import ChiSiamo from "./components/ChiSiamo";
+import Petizione from "./components/Petizione";
 
 import { Container } from "@mui/material";
 import { Footer } from "./components/Footer";
@@ -15,7 +16,7 @@ const App = () => {
     <>
       <GlobalStyle />
       <Navbar />
-      <ChiSiamo />
+      <Petizione />
       <Footer />
     </>
   );

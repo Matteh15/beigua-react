@@ -9,9 +9,9 @@ import canehome from "../img/canehome.png";
 import { faClipboardList } from "@fortawesome/free-solid-svg-icons";
 import { BrowserView, MobileView } from "react-device-detect";
 import ButtonGreen from "./ButtonGreen";
-import Noi from "../img/Noi.png";
+import petizione from "../img/petizione.png";
 
-const ChiSiamo = () => {
+const Petizione = () => {
   return (
     <>
       <Container
@@ -51,10 +51,10 @@ const ChiSiamo = () => {
               >
                 <br />
                 <br />
-                Con questa nostra petizione chiediamo che VENGA RITIRATO il
-                decreto in considerazione del fatto che le comunità locali da
-                anni si oppongono a qualunque ipotesi di apertura di una miniera
-                nel comprensorio del Beigua.
+                Con questa nostra petizione chiediamo che{" "}
+                <strong>VENGA RITIRATO</strong> il decreto in considerazione del
+                fatto che le comunità locali da anni si oppongono a qualunque
+                ipotesi di apertura di una miniera nel comprensorio del Beigua.
               </p>
 
               <ButtonGreen style={{ marginBottom: "3rem" }}>
@@ -64,7 +64,7 @@ const ChiSiamo = () => {
           </div>
           <div>
             <ContenitoreImmagine>
-              <img src={Noi} alt="" />
+              <img src={petizione} alt="" />
             </ContenitoreImmagine>
           </div>
         </BoxStyled>
@@ -111,4 +111,4 @@ const BoxStyled = styled(Box)`
   }
 `;
 
-export default ChiSiamo;
+export default Petizione;
