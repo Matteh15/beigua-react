@@ -5,6 +5,7 @@ import GlobalStyle from "./components/GlobalStyle";
 import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
 import Article from "./components/Article";
+import ChiSiamo from "./components/ChiSiamo";
 
 import { Container } from "@mui/material";
 import { Footer } from "./components/Footer";
@@ -14,8 +15,7 @@ const App = () => {
     <>
       <GlobalStyle />
       <Navbar />
-      <HomePage />
-      <Article />
+      <ChiSiamo />
       <Footer />
     </>
   );

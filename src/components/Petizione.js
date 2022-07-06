@@ -36,7 +36,7 @@ const ChiSiamo = () => {
                   fontFamily: "Poppins",
                 }}
               >
-                Chi siamo
+                Firma la petizione
               </Typography>
 
               <p
@@ -51,10 +51,10 @@ const ChiSiamo = () => {
               >
                 <br />
                 <br />
-                Siamo un gruppo di studenti che mira a sensibilizzare la
-                comunità circa gli effetti devastanti che una miniera nel Beigua
-                comporterebbe sia sulle persone che sugli animali. Un modo per
-                evitare tutto questo è firmare la petizione.
+                Con questa nostra petizione chiediamo che VENGA RITIRATO il
+                decreto in considerazione del fatto che le comunità locali da
+                anni si oppongono a qualunque ipotesi di apertura di una miniera
+                nel comprensorio del Beigua.
               </p>
 
               <ButtonGreen style={{ marginBottom: "3rem" }}>
