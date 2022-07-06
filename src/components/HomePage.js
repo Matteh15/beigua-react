@@ -110,25 +110,38 @@ const HomePage = () => {
           alignItems: "center",
         }}
       >
-        <DivCards style={{ margin: "3rem 0" }}>
-          <Card
-            icon={1}
-            title="Petizione"
-            descr="Firma la petizione: “No alla miniera nel comprensorio del Parco Naturale Regionale del Beigua”."
-          >
-            skald
-          </Card>
-          <Card
-            icon={2}
-            title="Notizie"
-            descr="Articoli su quello che comporta l’amianto e aggiornamenti del caso."
-          >
-            skald
-          </Card>
-          <Card icon={3} title="Chi siamo" descr="Scopri di più su chi siamo.">
-            skald
-          </Card>
-        </DivCards>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <DivCards style={{ margin: "3rem 0" }}>
+            <Card
+              icon={1}
+              title="Petizione"
+              descr="Firma la petizione: “No alla miniera nel comprensorio del Parco Naturale Regionale del Beigua”."
+            >
+              skald
+            </Card>
+            <Card
+              icon={2}
+              title="Notizie"
+              descr="Articoli su quello che comporta l’amianto e aggiornamenti del caso."
+            >
+              skald
+            </Card>
+            <Card
+              icon={3}
+              title="Chi siamo"
+              descr="Scopri di più su chi siamo."
+            >
+              skald
+            </Card>
+          </DivCards>
+        </div>
       </Container>
 
       <CasiContainer
@@ -186,7 +199,7 @@ const H1HomeSecond = styled.h1`
 `;
 
 const DivCards = styled.div`
-  width: 100%;
+  width: 70%;
   display: flex;
   justify-content: space-around;
   align-items: center;
