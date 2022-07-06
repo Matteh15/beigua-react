@@ -12,10 +12,7 @@ export const Footer = () => {
     <MyFooter>
       <FooterWrapper>
         <FlexDiv className="sameWidth">
-          <img src={logo} alt="" />
-          <p>
-            SAVE <br /> YOUR <br /> PETS
-          </p>
+          <img src={logo} alt="" width="150px" />
         </FlexDiv>
         <FlexDiv className="sameWidth">
           <FlexSpaceAround>
@@ -77,6 +74,6 @@ const FlexSpaceAround = styled.div`
   width: 100%;
 
   svg {
-    font-size: 48px;
+    font-size: 30px;
   }
 `;

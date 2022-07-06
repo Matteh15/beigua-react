@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CardMedia from '@mui/material/CardMedia';
+import CardMedia from "@mui/material/CardMedia";
 import { Container } from "@mui/material";
 import Card from "./Card";
 import canefinestra from "../img/canefinestra.png";
@@ -29,29 +29,28 @@ const Article = () => {
         <DivCards style={{ margin: "7rem 0" }}>
           <Card
             style={{ marginRight: "80px" }}
-            img = {fibre_amianto}
+            img={fibre_amianto}
             title="Effetti sulla Salute"
             descr="La presenza delle fibre di amianto nell’ambiente comporta danni a carico della salute."
+            articlePage={true}
           >
-          
             skald
           </Card>
 
           <Card
-          
-            img = {canefinestra}
+            img={canefinestra}
             title="Mesotelioma canino"
             descr="L’esposizione all’amianto nei cani porta ad uno stato di infiammazione cronica."
+            articlePage={true}
           >
-           
             skald
           </Card>
-          <Card 
-            
-            img = {illustr}
-            title="Amianto e animali" 
-            descr="I casi di mesotelioma maligno negli animali sono causati dall’ esposizione alle fibre di amianto.">
-          </Card>
+          <Card
+            img={illustr}
+            title="Amianto e animali"
+            descr="I casi di mesotelioma maligno negli animali sono causati dall’ esposizione alle fibre di amianto."
+            articlePage={true}
+          ></Card>
         </DivCards>
       </Container>
 
@@ -61,29 +60,28 @@ const Article = () => {
           color: "black",
           borderRadius: "10px",
           boxShadow: "5px 5px 10px rgb(0 0 0 / 0.4)",
-          
         }}
       >
         <FlexDiv style={{ marginTop: "5rem" }}>
-          <FlexDiv style={{ height:"100%" }}>
-            <img src={cani_soccorso} alt="canidasoccorso" style={{ height:"400px", width:"700px" }} />
+          <FlexDiv style={{ height: "100%" }}>
+            <img
+              src={cani_soccorso}
+              alt="canidasoccorso"
+              style={{ height: "400px", width: "700px" }}
+            />
           </FlexDiv>
           <div style={{ width: "60%" }}>
             <h3>«Morti alcuni cani da soccorso a causa dell’amianto»</h3>
             <p>
-                secondo il sindacato dei vigili 
-                del fuoco Usb la causa andrebbe 
-                ricercata nell’esposizione alle 
-                polveri sottili di amianto.
+              secondo il sindacato dei vigili del fuoco Usb la causa andrebbe
+              ricercata nell’esposizione alle polveri sottili di amianto.
             </p>
           </div>
-          
         </FlexDiv>
-      
-          <ButtonGreen style={{  marginBottom: "3rem"}}>
-            Leggi di pi&ugrave;
-          </ButtonGreen>
 
+        <ButtonGreen style={{ marginBottom: "3rem" }}>
+          Leggi di pi&ugrave;
+        </ButtonGreen>
       </Container>
     </>
   );

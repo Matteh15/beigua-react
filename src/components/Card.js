@@ -16,8 +16,6 @@ import { FaClipboardList, FaBook } from "react-icons/fa";
 import { BsFillBinocularsFill } from "react-icons/bs";
 
 import styleds from "styled-components";
-import "@fontsource/raleway";
-import "@fontsource/poppins"; 
 
 const useStyles = styled((theme) => ({
   card: {
@@ -28,7 +26,13 @@ const useStyles = styled((theme) => ({
   },
 }));
 
-export default function MultiActionAreaCard({ icon, title, descr, img}) {
+export default function MultiActionAreaCard({
+  icon,
+  title,
+  descr,
+  img,
+  articlePage,
+}) {
   const classes = useStyles();
   return (
     <MyCard>
@@ -50,21 +54,29 @@ export default function MultiActionAreaCard({ icon, title, descr, img}) {
             (icon == 3 && (
               <BsFillBinocularsFill style={{ width: "48px", height: "48px" }} />
             ))}
-            <img style={{ width: "300px", height: "250px" }} src={img}/>
+
+          {articlePage && (
+            <img style={{ width: "300px", height: "250px" }} src={img} />
+          )}
           <Typography
             gutterBottom
             variant="h5"
             component="div"
-            style={{ 
-              marginTop: "1rem" 
+            style={{
+              marginTop: "1rem",
             }}
             sx={{
-              fontFamily: 'Poppins',
+              fontFamily: "Poppins",
             }}
           >
             {title}
           </Typography>
-          <Typography style={{ height: "100px" }} sx={{fontFamily: 'Raleway'}}>{descr}</Typography>
+          <Typography
+            style={{ height: "100px" }}
+            sx={{ fontFamily: "Raleway" }}
+          >
+            {descr}
+          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions
@@ -74,7 +86,7 @@ export default function MultiActionAreaCard({ icon, title, descr, img}) {
           justifyContent: "center",
         }}
       >
-        <ButtonGreen variant="contained" href="#contained-buttons" >
+        <ButtonGreen variant="contained" href="#contained-buttons">
           Leggi di più
         </ButtonGreen>
       </CardActions>

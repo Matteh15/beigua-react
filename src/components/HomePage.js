@@ -122,7 +122,7 @@ const HomePage = () => {
         </DivCards>
       </Container>
 
-      <Container
+      <CasiContainer
         style={{
           backgroundColor: "#20202A",
           color: "white",
@@ -131,22 +131,31 @@ const HomePage = () => {
         }}
       >
         <FlexDiv style={{ marginTop: "5rem" }}>
-          <div style={{ width: "60%" }}>
+          <SessantaPerc>
             <H1HomeSecond>Casi tra gli animali</H1HomeSecond>
             <p>
               Proprio come negli esseri umani,i casi di mesotelioma maligno
               negli animali possono esser fatti risalire ad un’esposizione alle
               fibre di amianto.
             </p>
-          </div>
-          <FlexDiv style={{ width: "40%" }}>
+          </SessantaPerc>
+          <QuarantaPerc>
             <img src={canehome} alt="canehome" />
-          </FlexDiv>
+          </QuarantaPerc>
         </FlexDiv>
-        <ButtonGreen style={{ marginBottom: "3rem" }}>
-          Leggi di pi&ugrave;
-        </ButtonGreen>
-      </Container>
+        <BrowserView>
+          <ButtonGreen style={{ margin: "3rem auto" }}>
+            Leggi di pi&ugrave;
+          </ButtonGreen>
+        </BrowserView>
+        <MobileView>
+          <FlexDiv>
+            <ButtonGreen style={{ margin: "3rem auto" }}>
+              Leggi di pi&ugrave;
+            </ButtonGreen>
+          </FlexDiv>
+        </MobileView>
+      </CasiContainer>
     </>
   );
 };
@@ -189,11 +198,40 @@ const FlexDiv = styled.div`
   img {
     width: 60%;
   }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 
 const SvgContainer = styled.span`
   svg {
     font-size: 48px;
+  }
+`;
+
+const CasiContainer = styled(Container)`
+  @media screen and (max-width: 767px) {
+    width: 80% !important;
+
+    h1 {
+      font-size: 32px !important;
+    }
+  }
+`;
+
+const SessantaPerc = styled.div`
+  width: 60%;
+
+  @media screen and (max-width: 767px) {
+  }
+`;
+
+const QuarantaPerc = styled(FlexDiv)`
+  width: 40%;
+
+  @media screen and (max-width: 767px) {
+    margin: 2rem 0;
   }
 `;
 

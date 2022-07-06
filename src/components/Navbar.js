@@ -49,14 +49,8 @@ const Navbar = () => {
               color="inherit"
               aria-label="logo"
             >
-              <img src={logo} width="100px" color="white" />
+              <img src={logo} width="150px" color="white" />
             </IconButton>
-            <Typography variant="h6" component="div">
-              SAVE
-              <br />
-              YOUR
-              <br /> PETS
-            </Typography>
           </Stack>
 
           <Stack
