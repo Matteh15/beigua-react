@@ -12,11 +12,12 @@ import noi from "../img/Noi.png";
 const ChiSiamo = () => {
   return (
     <>
-      <div style={{ minHeight: "100vh" }}>
+      <div style={{ minHeight: "90vh" }}>
         <CasiContainer
           style={{
             borderRadius: "10px",
             boxShadow: "5px 5px 10px rgb(0 0 0 / 0.4)",
+            marginTop: "1rem",
           }}
         >
           <FlexDiv style={{ marginTop: "5rem" }}>
