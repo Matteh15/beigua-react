@@ -26,32 +26,41 @@ const Article = () => {
           alignItems: "center",
         }}
       >
-        <DivCards style={{ margin: "7rem 0" }}>
-          <Card
-            style={{ marginRight: "80px" }}
-            img={fibre_amianto}
-            title="Effetti sulla Salute"
-            descr="La presenza delle fibre di amianto nell’ambiente comporta danni a carico della salute."
-            articlePage={true}
-          >
-            skald
-          </Card>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <DivCards style={{ margin: "7rem 0" }}>
+            <Card
+              style={{ marginRight: "80px" }}
+              img={fibre_amianto}
+              title="Effetti sulla Salute"
+              descr="La presenza delle fibre di amianto nell’ambiente comporta danni a carico della salute."
+              articlePage={true}
+            >
+              skald
+            </Card>
 
-          <Card
-            img={canefinestra}
-            title="Mesotelioma canino"
-            descr="L’esposizione all’amianto nei cani porta ad uno stato di infiammazione cronica."
-            articlePage={true}
-          >
-            skald
-          </Card>
-          <Card
-            img={illustr}
-            title="Amianto e animali"
-            descr="I casi di mesotelioma maligno negli animali sono causati dall’ esposizione alle fibre di amianto."
-            articlePage={true}
-          ></Card>
-        </DivCards>
+            <Card
+              img={canefinestra}
+              title="Mesotelioma canino"
+              descr="L’esposizione all’amianto nei cani porta ad uno stato di infiammazione cronica."
+              articlePage={true}
+            >
+              skald
+            </Card>
+            <Card
+              img={illustr}
+              title="Amianto e animali"
+              descr="I casi di mesotelioma maligno negli animali sono causati dall’ esposizione alle fibre di amianto."
+              articlePage={true}
+            ></Card>
+          </DivCards>
+        </div>
       </Container>
 
       <CasiContainer
@@ -164,13 +173,9 @@ const SessantaPerc = styled.div`
 const QuarantaPerc = styled(FlexDiv)`
   width: 40%;
 
-  img {
-    width: 90%;
-  }
-
   @media screen and (max-width: 767px) {
     margin: 2rem 0;
-    width: 100%;
+    width: 80%;
     img {
       width: 100%;
     }

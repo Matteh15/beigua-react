@@ -101,9 +101,9 @@ export default function MultiActionAreaCard({
   );
 }
 
-const MyCard = styleds(Card)`
+const MyCard = styled(Card)`
   width: 250px;
-  height: 350px;
+  min-height: 350px;
   @media screen and (max-width: 767px) {
     width: 250px;
     margin-bottom: 3rem;
