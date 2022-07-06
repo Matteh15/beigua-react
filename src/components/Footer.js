@@ -15,14 +15,14 @@ export const Footer = () => {
           <img src={logo} alt="" width="150px" />
         </FlexDiv>
         <FlexDiv className="sameWidth">
-          <FlexSpaceAround>
+          <FlexSpaceAround style={{ flexDirection: "row" }}>
             <FaInstagram />
             <FaFacebook />
             <FaTiktok />
           </FlexSpaceAround>
         </FlexDiv>
         <FlexDiv className="sameWidth">
-          <FlexSpaceAround style={{ flexDirection: "column" }}>
+          <FlexSpaceAround>
             <span>CHI SIAMO</span>
             <span>PETIZIONE</span>
             <span>NOTIZIE</span>
@@ -76,6 +76,10 @@ const FlexSpaceAround = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 100%;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 
   svg {
     font-size: 30px;
