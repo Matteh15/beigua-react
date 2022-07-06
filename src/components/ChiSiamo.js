@@ -55,11 +55,9 @@ const ChiSiamo = () => {
                 comunità circa gli effetti devastanti che una miniera nel Beigua
                 comporterebbe sia sulle persone che sugli animali. Un modo per
                 evitare tutto questo è firmare la petizione.
+                <br />
+                <br />
               </p>
-
-              <ButtonGreen style={{ marginBottom: "3rem" }}>
-                Leggi di pi&ugrave;
-              </ButtonGreen>
             </Testo>
           </div>
           <div>
@@ -67,6 +65,9 @@ const ChiSiamo = () => {
               <img src={Noi} alt="" />
             </ContenitoreImmagine>
           </div>
+          <ButtonGreen style={{ marginBottom: "3rem" }}>
+            Leggi di pi&ugrave;
+          </ButtonGreen>
         </BoxStyled>
       </Container>
     </>
@@ -88,26 +89,25 @@ const Testo = styled.div`
 const ContenitoreImmagine = styled.div`
   margin: auto;
   width: 80%;
-  height: 70%;
+
+  img {
+    width: 100%;
+    object-fit: fill;
+  }
 `;
 
 const BoxStyled = styled(Box)`
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
   align-items: center;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.8);
-  width: 1269px;
-  height: 536px;
-  margin: auto;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin: 2rem 0;
+  padding-bottom: 2rem;
 
   @media screen and (max-width: 767px) {
-    display: grid;
-    grid-template-columns: 80%;
+    flex-direction: column;
   }
 `;
 

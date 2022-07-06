@@ -11,7 +11,7 @@ import { BrowserView, MobileView } from "react-device-detect";
 import ButtonGreen from "./ButtonGreen";
 import petizione from "../img/petizione.png";
 
-const Petizione = () => {
+const ChiSiamo = () => {
   return (
     <>
       <Container
@@ -55,11 +55,9 @@ const Petizione = () => {
                 <strong>VENGA RITIRATO</strong> il decreto in considerazione del
                 fatto che le comunità locali da anni si oppongono a qualunque
                 ipotesi di apertura di una miniera nel comprensorio del Beigua.
+                <br />
+                <br />
               </p>
-
-              <ButtonGreen style={{ marginBottom: "3rem" }}>
-                Leggi di pi&ugrave;
-              </ButtonGreen>
             </Testo>
           </div>
           <div>
@@ -67,6 +65,7 @@ const Petizione = () => {
               <img src={petizione} alt="" />
             </ContenitoreImmagine>
           </div>
+          <ButtonGreen style={{ marginBottom: "3rem" }}>Firma qui</ButtonGreen>
         </BoxStyled>
       </Container>
     </>
@@ -88,27 +87,26 @@ const Testo = styled.div`
 const ContenitoreImmagine = styled.div`
   margin: auto;
   width: 80%;
-  height: 70%;
+
+  img {
+    width: 100%;
+    object-fit: fill;
+  }
 `;
 
 const BoxStyled = styled(Box)`
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
   align-items: center;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.8);
-  width: 1269px;
-  height: 536px;
-  margin: auto;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin: 2rem 0;
+  padding-bottom: 2rem;
 
   @media screen and (max-width: 767px) {
-    display: grid;
-    grid-template-columns: 80%;
+    flex-direction: column;
   }
 `;
 
-export default Petizione;
+export default ChiSiamo;

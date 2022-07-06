@@ -125,14 +125,6 @@ const Navbar = () => {
           >
             <img src={logo} width="100px" color="white" />
           </IconButton>
-          <IconButton
-            size="small"
-            edge="start"
-            color="inherit"
-            aria-label="logo"
-          >
-            <EmailOutlined />
-          </IconButton>
         </Stack>
       </MobileView>
     </AppBar>

@@ -22,7 +22,7 @@ export const Footer = () => {
           </FlexSpaceAround>
         </FlexDiv>
         <FlexDiv className="sameWidth">
-          <FlexSpaceAround>
+          <FlexSpaceAround style={{ flexDirection: "column" }}>
             <span>CHI SIAMO</span>
             <span>PETIZIONE</span>
             <span>NOTIZIE</span>
@@ -51,7 +51,11 @@ const FooterWrapper = styled.div`
   align-items: center;
 
   @media screen and (max-width: 767px) {
-    flex-direction: column;
+    /* flex-direction: column; */
+
+    span {
+      margin: 0.2rem 0;
+    }
 
     .sameWidth {
       width: 100%;
