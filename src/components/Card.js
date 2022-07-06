@@ -7,6 +7,10 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import ButtonGreen from "./ButtonGreen";
 import { ClassNames } from "@emotion/react";
+import canefinestra from "../img/canefinestra.png";
+import cani_soccorso from "../img/cani_soccorso.png";
+import illustr from "../img/illustr.png";
+import fibre_amianto from "../img/fibre_amianto.png";
 
 import { FaClipboardList, FaBook } from "react-icons/fa";
 import { BsFillBinocularsFill } from "react-icons/bs";
@@ -24,7 +28,7 @@ const useStyles = styled((theme) => ({
   },
 }));
 
-export default function MultiActionAreaCard({ icon, title, descr }) {
+export default function MultiActionAreaCard({ icon, title, descr, img}) {
   const classes = useStyles();
   return (
     <MyCard>
@@ -46,6 +50,7 @@ export default function MultiActionAreaCard({ icon, title, descr }) {
             (icon == 3 && (
               <BsFillBinocularsFill style={{ width: "48px", height: "48px" }} />
             ))}
+            <img style={{ width: "300px", height: "250px" }} src={img}/>
           <Typography
             gutterBottom
             variant="h5"
@@ -69,7 +74,7 @@ export default function MultiActionAreaCard({ icon, title, descr }) {
           justifyContent: "center",
         }}
       >
-        <ButtonGreen variant="contained" href="#contained-buttons">
+        <ButtonGreen variant="contained" href="#contained-buttons" >
           Leggi di più
         </ButtonGreen>
       </CardActions>
