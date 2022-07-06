@@ -6,8 +6,11 @@ import { fontStyle } from "@mui/system";
 const ButtonGreen = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
   "&:hover": { backgroundColor: theme.palette.secondary.dark },
-  margin: 10,
+  marginTop: 10,
+  marginBottom: 10,
+  color: "white",
   fontStyle: "Poppins",
+  borderRadius: "10px",
 }));
 
 export default ButtonGreen;

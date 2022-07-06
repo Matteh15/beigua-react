@@ -15,6 +15,7 @@ const App = () => {
       <GlobalStyle />
       <Navbar />
       <HomePage />
+      <Article />
       <Footer />
     </>
   );

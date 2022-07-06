@@ -91,6 +91,15 @@ const HomePage = () => {
             }}
           />
         </Container>
+        <DivCards style={{ margin: "2rem 0" }}>
+          <Card
+            icon={0}
+            title=""
+            descr="Proprio come negli esseri umani, i casi di mesotelioma maligno negli
+            animali possono esser fatti risalire ad un’esposizione alle fibre di
+            amianto."
+          ></Card>
+        </DivCards>
       </MobileView>
 
       <Container
@@ -101,7 +110,7 @@ const HomePage = () => {
           alignItems: "center",
         }}
       >
-        <DivCards style={{ margin: "7rem 0" }}>
+        <DivCards style={{ margin: "3rem 0" }}>
           <Card
             icon={1}
             title="Petizione"
@@ -200,7 +209,7 @@ const FlexDiv = styled.div`
   }
 
   @media screen and (max-width: 767px) {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 `;
 

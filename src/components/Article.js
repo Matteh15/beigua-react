@@ -54,35 +54,41 @@ const Article = () => {
         </DivCards>
       </Container>
 
-      <Container
+      <CasiContainer
         style={{
-          backgroundColor: "white",
-          color: "black",
+          backgroundColor: "#20202A",
+          color: "white",
           borderRadius: "10px",
           boxShadow: "5px 5px 10px rgb(0 0 0 / 0.4)",
         }}
       >
         <FlexDiv style={{ marginTop: "5rem" }}>
-          <FlexDiv style={{ height: "100%" }}>
-            <img
-              src={cani_soccorso}
-              alt="canidasoccorso"
-              style={{ height: "400px", width: "700px" }}
-            />
-          </FlexDiv>
-          <div style={{ width: "60%" }}>
-            <h3>«Morti alcuni cani da soccorso a causa dell’amianto»</h3>
+          <SessantaPerc>
+            <H1HomeSecond>
+              Morti alcuni cani da soccorso a causa dell’amianto
+            </H1HomeSecond>
             <p>
-              secondo il sindacato dei vigili del fuoco Usb la causa andrebbe
+              Secondo il sindacato dei vigili del fuoco la causa andrebbe
               ricercata nell’esposizione alle polveri sottili di amianto.
             </p>
-          </div>
+          </SessantaPerc>
+          <QuarantaPerc>
+            <img src={cani_soccorso} alt="canehome" />
+          </QuarantaPerc>
         </FlexDiv>
-
-        <ButtonGreen style={{ marginBottom: "3rem" }}>
-          Leggi di pi&ugrave;
-        </ButtonGreen>
-      </Container>
+        <BrowserView>
+          <ButtonGreen style={{ margin: "3rem auto" }}>
+            Leggi di pi&ugrave;
+          </ButtonGreen>
+        </BrowserView>
+        <MobileView>
+          <FlexDiv>
+            <ButtonGreen style={{ margin: "3rem auto" }}>
+              Leggi di pi&ugrave;
+            </ButtonGreen>
+          </FlexDiv>
+        </MobileView>
+      </CasiContainer>
     </>
   );
 };
@@ -94,7 +100,7 @@ const H1Home = styled.h1`
 `;
 
 const H1HomeSecond = styled.h1`
-  font-size: 64px;
+  font-size: 32px;
   font-weight: 800;
   margin-bottom: 3rem;
 
@@ -125,11 +131,49 @@ const FlexDiv = styled.div`
   img {
     width: 60%;
   }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column !important;
+  }
 `;
 
 const SvgContainer = styled.span`
   svg {
     font-size: 48px;
+  }
+`;
+
+const CasiContainer = styled(Container)`
+  @media screen and (max-width: 767px) {
+    width: 80% !important;
+
+    h1 {
+      font-size: 32px !important;
+    }
+  }
+`;
+
+const SessantaPerc = styled.div`
+  width: 60%;
+
+  @media screen and (max-width: 767px) {
+    width: 80%;
+  }
+`;
+
+const QuarantaPerc = styled(FlexDiv)`
+  width: 40%;
+
+  img {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 2rem 0;
+    width: 100%;
+    img {
+      width: 100%;
+    }
   }
 `;
 

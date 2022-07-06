@@ -22,7 +22,7 @@ const useStyles = styled((theme) => ({
     marginBottom: theme.spacing,
   },
   media: {
-    height: 250,
+    minHeight: 450,
   },
 }));
 
@@ -56,7 +56,7 @@ export default function MultiActionAreaCard({
             ))}
 
           {articlePage && (
-            <img style={{ width: "300px", height: "250px" }} src={img} />
+            <img style={{ width: "250px", height: "200px" }} src={img} />
           )}
           <Typography
             gutterBottom
@@ -72,7 +72,12 @@ export default function MultiActionAreaCard({
             {title}
           </Typography>
           <Typography
-            style={{ height: "100px" }}
+            style={{
+              minHeight: "100px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
             sx={{ fontFamily: "Raleway" }}
           >
             {descr}
@@ -86,16 +91,19 @@ export default function MultiActionAreaCard({
           justifyContent: "center",
         }}
       >
-        <ButtonGreen variant="contained" href="#contained-buttons">
-          Leggi di più
-        </ButtonGreen>
+        {icon != 0 && (
+          <ButtonGreen variant="contained" href="#contained-buttons">
+            Leggi di più
+          </ButtonGreen>
+        )}
       </CardActions>
     </MyCard>
   );
 }
 
 const MyCard = styleds(Card)`
-  width: 350px;
+  width: 250px;
+  height: 350px;
   @media screen and (max-width: 767px) {
     width: 250px;
     margin-bottom: 3rem;
