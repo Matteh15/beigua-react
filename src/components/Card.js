@@ -12,6 +12,8 @@ import { FaClipboardList, FaBook } from "react-icons/fa";
 import { BsFillBinocularsFill } from "react-icons/bs";
 
 import styleds from "styled-components";
+import "@fontsource/raleway";
+import "@fontsource/poppins"; 
 
 const useStyles = styled((theme) => ({
   card: {
@@ -48,11 +50,16 @@ export default function MultiActionAreaCard({ icon, title, descr }) {
             gutterBottom
             variant="h5"
             component="div"
-            style={{ marginTop: "1rem" }}
+            style={{ 
+              marginTop: "1rem" 
+            }}
+            sx={{
+              fontFamily: 'Poppins',
+            }}
           >
             {title}
           </Typography>
-          <Typography style={{ height: "100px" }}>{descr}</Typography>
+          <Typography style={{ height: "100px" }} sx={{fontFamily: 'Raleway'}}>{descr}</Typography>
         </CardContent>
       </CardActionArea>
       <CardActions
@@ -72,10 +79,8 @@ export default function MultiActionAreaCard({ icon, title, descr }) {
 
 const MyCard = styleds(Card)`
   width: 350px;
-
   @media screen and (max-width: 767px) {
     width: 250px;
     margin-bottom: 3rem;
   }
-
 `;

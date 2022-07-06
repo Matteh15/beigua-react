@@ -6,6 +6,8 @@ import ButtonGreen from "./ButtonGreen"
 import { BrowserView, isMobile, MobileView } from "react-device-detect";
 import styled from "styled-components";
 import MediaQuery from 'react-responsive';
+import "@fontsource/raleway";
+import "@fontsource/poppins"; 
 
 import {
   Grid,
@@ -14,16 +16,6 @@ import {
   Button
 }from '@mui/material';
 import ButtonWhite from './ButtonWhite';
-
-
-
-
-/*const Img = styled(cat)({
-  margin: 'auto',
-  display: 'block',
-  height: '50px'
-});*/
-
 
 const Div404 = styled.div`
   color: white;
@@ -36,28 +28,29 @@ const Div404 = styled.div`
 }
   @media screen and (max-width: 801px) {
     flex-direction: column;
-    font-size:60px;
+    font-size:100px;
     margin-left: 50px;
   }
   @media screen and (max-width: 360px) {
+    font-size:50px;
     margin-left: 50px;
   }
 `;
 const DivOPS = styled.div`
   color: white;
   font-family: 'Poppins';
-  font-weight: 800;
-  margin-top: 40px;
+  font-weight: 900;
   margin-left: 90px;
 @media screen and (min-width: 802px) {
-  font-size:68px; 
+  font-size:48px; 
 }
   @media screen and (max-width: 801px) {
     flex-direction: column;
-    font-size:48px;
+    font-size:40px;
     margin-left: 50px;
   }
   @media screen and (max-width: 360px) {
+    font-size:30px;
     margin-left: 50px;
   }
 `;
@@ -82,7 +75,7 @@ const Div1 = styled.div`
 `;
 const Div2 = styled.div`
   color: white;
-  font-family: 'Poppins';
+  font-family:'Raleway';
   margin-top: 20px;
   margin-left: 90px;
   text-shadow: 1px 1px 6px #20202A;
