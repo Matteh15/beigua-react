@@ -11,9 +11,9 @@ export const Footer = () => {
   return (
     <MyFooter>
       <FooterWrapper>
-        <FlexDiv className="sameWidth">
+        {/* <FlexDiv className="sameWidth">
           <img src={logo} alt="" width="150px" />
-        </FlexDiv>
+        </FlexDiv> */}
         <FlexDiv className="sameWidth">
           <FlexSpaceAround style={{ flexDirection: "row" }}>
             <FaInstagram />
@@ -83,5 +83,9 @@ const FlexSpaceAround = styled.div`
 
   svg {
     font-size: 30px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 48px;
+    }
   }
 `;

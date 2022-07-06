@@ -16,6 +16,7 @@ import { useState } from "react";
 
 import styled from "styled-components";
 import logo from "../img/logo.png";
+import { Outlet, Link } from "react-router-dom";
 
 const Navbar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -24,7 +25,12 @@ const Navbar = () => {
     setOpenDrawer(!openDrawer);
   };
 
-  const pages = ["HOME", "CHI SIAMO", "NOTIZIE", "CONTATTI", "PETIZIONE"];
+  const pages = [
+    { nome: "HOME", url: "/" },
+    { nome: "CHI SIAMO", url: "/chi-siamo" },
+    { nome: "NOTIZIE", url: "/articoli" },
+    { nome: "PETIZIONE", url: "/petizione" },
+  ];
 
   return (
     <AppBar
@@ -61,8 +67,13 @@ const Navbar = () => {
             flexGrow={1}
           >
             {pages.map((value, index) => (
-              <MyBtn className={value == "PETIZIONE" ? "pet" : ""}>
-                {value}
+              <MyBtn>
+                <MyLink
+                  className={value.nome == "PETIZIONE" ? "pet" : ""}
+                  to={`${value.url}`}
+                >
+                  {value.nome}
+                </MyLink>
               </MyBtn>
             ))}
           </Stack>
@@ -81,7 +92,14 @@ const Navbar = () => {
           }}
         >
           {pages.map((value, index) => (
-            <MyBtn className={value == "PETIZIONE" ? "pet" : ""}>{value}</MyBtn>
+            <MyBtn>
+              <MyLink
+                className={value.nome == "PETIZIONE" ? "pet" : ""}
+                to={`${value.url}`}
+              >
+                {value.nome}
+              </MyLink>
+            </MyBtn>
           ))}
 
           <Stack direction="row" alignItems="flex-end" flexGrow={1}>
@@ -130,6 +148,19 @@ const Navbar = () => {
     </AppBar>
   );
 };
+
+const MyLink = styled(Link)`
+  color: white !important;
+  text-decoration: none !important;
+
+  &.pet {
+    color: #98c63b !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin: 1rem 0;
+  }
+`;
 
 const MyBtn = styled(Button)`
   color: white !important;

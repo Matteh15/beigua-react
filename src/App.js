@@ -10,14 +10,22 @@ import Petizione from "./components/Petizione";
 
 import { Container } from "@mui/material";
 import { Footer } from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <>
-      <GlobalStyle />
-      <Navbar />
-      <Petizione />
-      <Footer />
+      <Router>
+        <GlobalStyle />
+        <Navbar />
+        <Routes>
+          <Route path="/" exact element={<HomePage />} />
+          <Route path="/articoli" exact element={<Article />} />
+          <Route path="/chi-siamo" exact element={<ChiSiamo />} />
+          <Route path="/petizione" exact element={<Petizione />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 };

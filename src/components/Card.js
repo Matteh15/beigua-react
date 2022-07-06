@@ -32,6 +32,7 @@ export default function MultiActionAreaCard({
   descr,
   img,
   articlePage,
+  textMob,
 }) {
   const classes = useStyles();
   return (
@@ -80,7 +81,7 @@ export default function MultiActionAreaCard({
             }}
             sx={{ fontFamily: "Raleway" }}
           >
-            {descr}
+            <p className="raleway">{descr}</p>
           </Typography>
         </CardContent>
       </CardActionArea>

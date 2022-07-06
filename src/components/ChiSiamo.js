@@ -1,113 +1,141 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Typography } from "@mui/material";
-import { Box, Container } from "@mui/material";
-import Card from "./Card";
-import gattoHome from "../img/gattoHome.png";
-import canehome from "../img/canehome.png";
-import { faClipboardList } from "@fortawesome/free-solid-svg-icons";
-import { BrowserView, MobileView } from "react-device-detect";
+import { Container } from "@mui/material";
 import ButtonGreen from "./ButtonGreen";
-import Noi from "../img/Noi.png";
+import { Footer } from "./Footer";
+import { BrowserView, MobileView } from "react-device-detect";
+import { FaTiktok, FaInstagram, FaFacebook } from "react-icons/fa";
+
+import noi from "../img/Noi.png";
 
 const ChiSiamo = () => {
   return (
     <>
-      <Container
-        maxWidth="100%"
+      <CasiContainer
         style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
+          borderRadius: "10px",
+          boxShadow: "5px 5px 10px rgb(0 0 0 / 0.4)",
         }}
       >
-        <BoxStyled>
-          <div>
-            <Testo>
-              <Typography
-                gutterBottom
-                variant="h2"
-                component="div"
-                style={{
-                  marginTop: "1rem",
-                }}
-                sx={{
-                  fontFamily: "Poppins",
-                }}
-              >
-                Chi siamo
-              </Typography>
-
-              <p
-                style={{
-                  fontFamily: "Raleway",
-                  fontWeight: "400",
-                  fontSize: "18px",
-                  lineHeight: "30px",
-                  letterSpacing: "-0.015em",
-                  color: "#000000",
-                }}
-              >
-                <br />
-                <br />
-                Siamo un gruppo di studenti che mira a sensibilizzare la
-                comunità circa gli effetti devastanti che una miniera nel Beigua
-                comporterebbe sia sulle persone che sugli animali. Un modo per
-                evitare tutto questo è firmare la petizione.
-                <br />
-                <br />
-              </p>
-            </Testo>
-          </div>
-          <div>
-            <ContenitoreImmagine>
-              <img src={Noi} alt="" />
-            </ContenitoreImmagine>
-          </div>
-          <ButtonGreen style={{ marginBottom: "3rem" }}>
+        <FlexDiv style={{ marginTop: "5rem" }}>
+          <SessantaPerc>
+            <H1HomeSecond>Chi siamo</H1HomeSecond>
+            <p>
+              Siamo un gruppo di studenti che mira a sensibilizzare la comunità
+              circa gli effetti devastanti che una miniera nel Beigua
+              comporterebbe sia sulle persone che sugli animali.{" "}
+              <strong>
+                Un modo per evitare tutto questo è firmare la petizione.
+              </strong>
+            </p>
+          </SessantaPerc>
+          <QuarantaPerc>
+            <img src={noi} alt="noi" />
+          </QuarantaPerc>
+        </FlexDiv>
+        <BrowserView>
+          <ButtonGreen style={{ margin: "3rem auto" }}>
             Leggi di pi&ugrave;
           </ButtonGreen>
-        </BoxStyled>
-      </Container>
+        </BrowserView>
+        <MobileView>
+          <FlexDiv>
+            <ButtonGreen style={{ margin: "3rem auto" }}>
+              Leggi di pi&ugrave;
+            </ButtonGreen>
+          </FlexDiv>
+        </MobileView>
+      </CasiContainer>
     </>
   );
 };
 
-const H1ChiSiamo = styled.h1`
+const H1Home = styled.h1`
   font-size: 72px;
   font-weight: 800;
   margin-bottom: 3rem;
 `;
 
-const Testo = styled.div`
-  margin: auto;
-  margin-top: 25px;
-  margin-left: 50px;
-`;
+const H1HomeSecond = styled.h1`
+  font-size: 64px;
+  font-weight: 800;
+  margin-bottom: 3rem;
 
-const ContenitoreImmagine = styled.div`
-  margin: auto;
-  width: 80%;
-
-  img {
-    width: 100%;
-    object-fit: fill;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 1rem;
   }
 `;
 
-const BoxStyled = styled(Box)`
+const DivCards = styled.div`
+  width: 70%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.8);
-  margin: 2rem 0;
-  padding-bottom: 2rem;
+  padding: 3rem 5rem;
 
   @media screen and (max-width: 767px) {
     flex-direction: column;
+    padding: 0rem;
+    margin-top: 5rem;
+  }
+`;
+
+const FlexDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column !important;
+  }
+`;
+
+const SvgContainer = styled.span`
+  svg {
+    font-size: 48px;
+  }
+`;
+
+const CasiContainer = styled(Container)`
+  margin: 2rem 0;
+
+  @media screen and (max-width: 767px) {
+    width: 80% !important;
+
+    h1 {
+      font-size: 32px !important;
+    }
+  }
+`;
+
+const SessantaPerc = styled.div`
+  width: 60%;
+
+  @media screen and (max-width: 767px) {
+  }
+`;
+
+const QuarantaPerc = styled(FlexDiv)`
+  width: 40%;
+
+  img {
+    width: 80%;
+    object-fit: fill;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 2rem 0;
+    width: 100%;
+
+    img {
+      width: 100%;
+      object-fit: fill;
+    }
   }
 `;
 

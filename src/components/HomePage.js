@@ -91,15 +91,37 @@ const HomePage = () => {
             }}
           />
         </Container>
-        <DivCards style={{ margin: "2rem 0" }}>
-          <Card
-            icon={0}
-            title=""
-            descr="Proprio come negli esseri umani, i casi di mesotelioma maligno negli
-            animali possono esser fatti risalire ad un’esposizione alle fibre di
-            amianto."
-          ></Card>
-        </DivCards>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <DivCards
+            style={{
+              margin: "2rem 0",
+              backgroundColor: "#323242",
+              borderRadius: "10px",
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "#323242",
+                padding: "2rem",
+                color: "white",
+                borderRadius: "10px",
+              }}
+            >
+              <p className="raleway" style={{ lineHeight: "20px" }}>
+                Proprio come negli esseri umani, i casi di mesotelioma maligno
+                negli animali possono esser fatti risalire ad un’esposizione
+                alle fibre di amianto.
+              </p>
+            </div>
+          </DivCards>
+        </div>
       </MobileView>
 
       <Container
@@ -155,7 +177,7 @@ const HomePage = () => {
         <FlexDiv style={{ marginTop: "5rem" }}>
           <SessantaPerc>
             <H1HomeSecond>Casi tra gli animali</H1HomeSecond>
-            <p>
+            <p className="raleway">
               Proprio come negli esseri umani,i casi di mesotelioma maligno
               negli animali possono esser fatti risalire ad un’esposizione alle
               fibre di amianto.
