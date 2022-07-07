@@ -7,6 +7,8 @@ import logo from "../img/logo.png";
 
 import { FaTiktok, FaInstagram, FaFacebook } from "react-icons/fa";
 
+import { Link } from "react-router-dom";
+
 export const Footer = () => {
   return (
     <MyFooter>
@@ -16,22 +18,47 @@ export const Footer = () => {
         </FlexDiv> */}
         <FlexDiv className="sameWidth">
           <FlexSpaceAround style={{ flexDirection: "row" }}>
-            <FaInstagram />
-            <FaFacebook />
-            <FaTiktok />
+            <a href="https://www.instagram.com/save.yourpets/">
+              <FaInstagram />
+            </a>
+            <a href="https://m.facebook.com/SaveyourPets-103108672470413/">
+              <FaFacebook />
+            </a>
+            <a href="https://vm.tiktok.com/ZMNDv8vqW/">
+              <FaTiktok />
+            </a>
           </FlexSpaceAround>
         </FlexDiv>
         <FlexDiv className="sameWidth">
           <FlexSpaceAround>
-            <span>CHI SIAMO</span>
-            <span>PETIZIONE</span>
-            <span>NOTIZIE</span>
+            <MyLink to="/chi-siamo">
+              <span>CHI SIAMO</span>
+            </MyLink>
+            <MyLink to="/petizione">
+              <span>PETIZIONE</span>
+            </MyLink>
+            <MyLink to="/articoli">
+              <span>NOTIZIE</span>
+            </MyLink>
           </FlexSpaceAround>
         </FlexDiv>
       </FooterWrapper>
     </MyFooter>
   );
 };
+
+const MyLink = styled(Link)`
+  color: white !important;
+  text-decoration: none !important;
+
+  &.pet {
+    color: #98c63b !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin: 1rem 0;
+  }
+`;
 
 const MyFooter = styled.footer`
   padding: 1.5rem 1rem;

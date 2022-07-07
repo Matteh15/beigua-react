@@ -55,7 +55,9 @@ const Navbar = () => {
               color="inherit"
               aria-label="logo"
             >
-              <img src={logo} width="150px" color="white" />
+              <Link to="/">
+                <img src={logo} width="150px" color="white" />
+              </Link>
             </IconButton>
           </Stack>
 
@@ -141,7 +143,9 @@ const Navbar = () => {
             color="inherit"
             aria-label="logo"
           >
-            <img src={logo} width="100px" color="white" />
+            <Link to="/">
+              <img src={logo} width="100px" color="white" />
+            </Link>
           </IconButton>
         </Stack>
       </MobileView>

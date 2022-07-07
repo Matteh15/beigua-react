@@ -1,19 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import CardMedia from "@mui/material/CardMedia";
 import { Container } from "@mui/material";
 import Card from "./Card";
 import canefinestra from "../img/canefinestra.png";
 import cani_soccorso from "../img/cani_soccorso.png";
 import illustr from "../img/illustr.png";
 import fibre_amianto from "../img/fibre_amianto.png";
-import { faClipboardList } from "@fortawesome/free-solid-svg-icons";
 import { BrowserView, MobileView } from "react-device-detect";
 import ButtonGreen from "./ButtonGreen";
 
-import { Footer } from "./Footer";
-
-import { FaTiktok, FaInstagram, FaFacebook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Article = () => {
   return (
@@ -41,6 +37,7 @@ const Article = () => {
               title="Effetti sulla Salute"
               descr="La presenza delle fibre di amianto nell’ambiente comporta danni a carico della salute."
               articlePage={true}
+              link=""
             >
               skald
             </Card>
@@ -50,6 +47,7 @@ const Article = () => {
               title="Mesotelioma canino"
               descr="L’esposizione all’amianto nei cani porta ad uno stato di infiammazione cronica."
               articlePage={true}
+              link=""
             >
               skald
             </Card>
@@ -58,6 +56,7 @@ const Article = () => {
               title="Amianto e animali"
               descr="I casi di mesotelioma maligno negli animali sono causati dall’ esposizione alle fibre di amianto."
               articlePage={true}
+              link=""
             ></Card>
           </DivCards>
         </div>
@@ -86,15 +85,19 @@ const Article = () => {
           </QuarantaPerc>
         </FlexDiv>
         <BrowserView>
-          <ButtonGreen style={{ margin: "3rem auto" }}>
-            Leggi di pi&ugrave;
-          </ButtonGreen>
-        </BrowserView>
-        <MobileView>
-          <FlexDiv>
+          <Link to="">
             <ButtonGreen style={{ margin: "3rem auto" }}>
               Leggi di pi&ugrave;
             </ButtonGreen>
+          </Link>
+        </BrowserView>
+        <MobileView>
+          <FlexDiv>
+            <Link to="">
+              <ButtonGreen style={{ margin: "3rem auto" }}>
+                Leggi di pi&ugrave;
+              </ButtonGreen>
+            </Link>
           </FlexDiv>
         </MobileView>
       </CasiContainer>

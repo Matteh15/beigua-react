@@ -14,7 +14,7 @@ import fibre_amianto from "../img/fibre_amianto.png";
 
 import { FaClipboardList, FaBook } from "react-icons/fa";
 import { BsFillBinocularsFill } from "react-icons/bs";
-
+import { Link } from "react-router-dom";
 import styleds from "styled-components";
 
 const useStyles = styled((theme) => ({
@@ -32,59 +32,57 @@ export default function MultiActionAreaCard({
   descr,
   img,
   articlePage,
-  textMob,
+  link,
 }) {
   const classes = useStyles();
   return (
     <MyCard>
-      <CardActionArea>
-        <CardContent
+      <CardContent
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-beetwen",
+          alignItems: "center",
+        }}
+      >
+        {(icon == 1 && (
+          <FaClipboardList style={{ width: "48px", height: "48px" }} />
+        )) ||
+          (icon == 2 && <FaBook style={{ width: "48px", height: "48px" }} />) ||
+          (icon == 3 && (
+            <BsFillBinocularsFill style={{ width: "48px", height: "48px" }} />
+          ))}
+
+        {articlePage && (
+          <img style={{ width: "250px", height: "200px" }} src={img} />
+        )}
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
           style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-beetwen",
-            alignItems: "center",
+            marginTop: "1rem",
+            overflow: "hidden",
+          }}
+          sx={{
+            fontFamily: "Poppins",
           }}
         >
-          {(icon == 1 && (
-            <FaClipboardList style={{ width: "48px", height: "48px" }} />
-          )) ||
-            (icon == 2 && (
-              <FaBook style={{ width: "48px", height: "48px" }} />
-            )) ||
-            (icon == 3 && (
-              <BsFillBinocularsFill style={{ width: "48px", height: "48px" }} />
-            ))}
-
-          {articlePage && (
-            <img style={{ width: "250px", height: "200px" }} src={img} />
-          )}
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="div"
-            style={{
-              marginTop: "1rem",
-            }}
-            sx={{
-              fontFamily: "Poppins",
-            }}
-          >
-            {title}
-          </Typography>
-          <Typography
-            style={{
-              minHeight: "100px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            sx={{ fontFamily: "Raleway" }}
-          >
-            <p className="raleway">{descr}</p>
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+          {title}
+        </Typography>
+        <Typography
+          style={{
+            minHeight: "100px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            overflow: "hidden",
+          }}
+          sx={{ fontFamily: "Raleway" }}
+        >
+          <p className="raleway">{descr}</p>
+        </Typography>
+      </CardContent>
       <CardActions
         style={{
           display: "flex",
@@ -93,9 +91,11 @@ export default function MultiActionAreaCard({
         }}
       >
         {icon != 0 && (
-          <ButtonGreen variant="contained" href="#contained-buttons">
-            Leggi di più
-          </ButtonGreen>
+          <Link to={link}>
+            <ButtonGreen variant="contained" href="#contained-buttons">
+              Leggi di più
+            </ButtonGreen>
+          </Link>
         )}
       </CardActions>
     </MyCard>
@@ -108,5 +108,18 @@ const MyCard = styled(Card)`
   @media screen and (max-width: 767px) {
     width: 250px;
     margin-bottom: 3rem;
+  }
+`;
+
+const MyLink = styled(Link)`
+  color: white !important;
+  text-decoration: none !important;
+
+  &.pet {
+    color: #98c63b !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin: 1rem 0;
   }
 `;

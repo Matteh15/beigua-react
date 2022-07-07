@@ -12,37 +12,42 @@ import petizione from "../img/petizione.png";
 const ChiSiamo = () => {
   return (
     <>
-      <CasiContainer
-        style={{
-          borderRadius: "10px",
-          boxShadow: "5px 5px 10px rgb(0 0 0 / 0.4)",
-        }}
-      >
-        <FlexDiv style={{ marginTop: "5rem" }}>
-          <SessantaPerc>
-            <H1HomeSecond>Firma la petizione</H1HomeSecond>
-            <p className="raleway">
-              Con questa nostra petizione chiediamo che{" "}
-              <strong>VENGA RITIRATO</strong> il decreto in considerazione del
-              fatto che le comunità locali da anni si oppongono a qualunque
-              ipotesi di apertura di una miniera nel comprensorio del Beigua.
-            </p>
-          </SessantaPerc>
-          <QuarantaPerc>
-            <img src={petizione} alt="noi" />
-          </QuarantaPerc>
-        </FlexDiv>
-        <BrowserView>
-          <ButtonGreen style={{ margin: "3rem auto" }}>
-            Leggi di pi&ugrave;
-          </ButtonGreen>
-        </BrowserView>
-        <MobileView>
-          <FlexDiv>
-            <ButtonGreen style={{ margin: "3rem auto" }}>Firma qui</ButtonGreen>
+      <div style={{ minHeight: "90vh" }}>
+        <CasiContainer
+          style={{
+            borderRadius: "10px",
+            boxShadow: "5px 5px 10px rgb(0 0 0 / 0.4)",
+            marginTop: "5rem",
+          }}
+        >
+          <FlexDiv style={{ marginTop: "5rem" }}>
+            <SessantaPerc>
+              <H1HomeSecond>Firma la petizione</H1HomeSecond>
+              <p className="raleway">
+                Con questa nostra petizione chiediamo che{" "}
+                <strong>VENGA RITIRATO</strong> il decreto in considerazione del
+                fatto che le comunità locali da anni si oppongono a qualunque
+                ipotesi di apertura di una miniera nel comprensorio del Beigua.
+              </p>
+            </SessantaPerc>
+            <QuarantaPerc>
+              <img src={petizione} alt="noi" />
+            </QuarantaPerc>
           </FlexDiv>
-        </MobileView>
-      </CasiContainer>
+          <BrowserView>
+            <ButtonGreen style={{ margin: "3rem auto" }}>
+              Leggi di pi&ugrave;
+            </ButtonGreen>
+          </BrowserView>
+          <MobileView>
+            <FlexDiv>
+              <ButtonGreen style={{ margin: "3rem auto" }}>
+                Firma qui
+              </ButtonGreen>
+            </FlexDiv>
+          </MobileView>
+        </CasiContainer>
+      </div>
     </>
   );
 };

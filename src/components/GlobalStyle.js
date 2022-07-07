@@ -19,6 +19,18 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 100 !important;
         font-family: Raleway, sans-serif !important;
     }
+
+    a {
+        svg {
+            color: white;
+        }
+
+        &:visited { 
+            color: white;
+        }
+
+    }
+    }
     
 `;
 

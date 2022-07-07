@@ -8,6 +8,7 @@ import canehome from "../img/canehome.png";
 import { faClipboardList } from "@fortawesome/free-solid-svg-icons";
 import { BrowserView, MobileView } from "react-device-detect";
 import ButtonGreen from "./ButtonGreen";
+import { Link } from "react-router-dom";
 
 import { Footer } from "./Footer";
 
@@ -64,13 +65,19 @@ const HomePage = () => {
               }}
             >
               <SvgContainer>
-                <FaInstagram />
+                <a href="https://www.instagram.com/save.yourpets/">
+                  <FaInstagram />
+                </a>
               </SvgContainer>
               <SvgContainer>
-                <FaFacebook />
+                <a href="https://m.facebook.com/SaveyourPets-103108672470413/">
+                  <FaFacebook />
+                </a>
               </SvgContainer>
               <SvgContainer>
-                <FaTiktok />
+                <a href="https://vm.tiktok.com/ZMNDv8vqW/">
+                  <FaTiktok />
+                </a>
               </SvgContainer>
             </div>
           </div>
@@ -145,6 +152,7 @@ const HomePage = () => {
               icon={1}
               title="Petizione"
               descr="Firma la petizione: “No alla miniera nel comprensorio del Parco Naturale Regionale del Beigua”."
+              link="/petizione"
             >
               skald
             </Card>
@@ -152,6 +160,7 @@ const HomePage = () => {
               icon={2}
               title="Notizie"
               descr="Articoli su quello che comporta l’amianto e aggiornamenti del caso."
+              link="/articoli"
             >
               skald
             </Card>
@@ -159,6 +168,7 @@ const HomePage = () => {
               icon={3}
               title="Chi siamo"
               descr="Scopri di più su chi siamo."
+              link="/chi-siamo"
             >
               skald
             </Card>
@@ -188,15 +198,19 @@ const HomePage = () => {
           </QuarantaPerc>
         </FlexDiv>
         <BrowserView>
-          <ButtonGreen style={{ margin: "3rem auto" }}>
-            Leggi di pi&ugrave;
-          </ButtonGreen>
-        </BrowserView>
-        <MobileView>
-          <FlexDiv>
+          <Link to="/articoli">
             <ButtonGreen style={{ margin: "3rem auto" }}>
               Leggi di pi&ugrave;
             </ButtonGreen>
+          </Link>
+        </BrowserView>
+        <MobileView>
+          <FlexDiv>
+            <Link to="/articoli">
+              <ButtonGreen style={{ margin: "3rem auto" }}>
+                Leggi di pi&ugrave;
+              </ButtonGreen>
+            </Link>
           </FlexDiv>
         </MobileView>
       </CasiContainer>
@@ -276,6 +290,19 @@ const QuarantaPerc = styled(FlexDiv)`
 
   @media screen and (max-width: 767px) {
     margin: 2rem 0;
+  }
+`;
+
+const MyLink = styled(Link)`
+  color: white !important;
+  text-decoration: none !important;
+
+  &.pet {
+    color: #98c63b !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin: 1rem 0;
   }
 `;
 
